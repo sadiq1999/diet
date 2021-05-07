@@ -62,9 +62,17 @@
             <!-- img and txt -->
             <h3> Your EXERCISES</h3>
 
-            {% for i in name1 %}
-                <img src="static/Image/exercises/{{i}}.png" class="img-plan"> 
-          {% endfor %}
+            {% if user.new_user == '1' %}
+
+                {% for i in name1 %}
+                    <img src="static/Image/exercises/{{i}}.png" class="img-plan"> 
+                {% endfor %}
+            {% else %}
+                <h1 id="plan-h">Do "PLAN'S SEETINGS" to see your information or <a href="/settings">click here to go</a></h1>
+                <div class="r1">
+                    <h3>&nbsp;</h3>
+                </div>
+            {% endif %}
 
             <!--  -->
 
